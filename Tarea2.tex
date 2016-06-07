@@ -11,16 +11,21 @@
 \begin{enumerate}
 %\clearpage
 \item Nombre 3 servicios ofrecidos por la Capa de RED.
-- Permite la conexión entre 2 redes geograficamente distintas\\
-- Busca la mejor ruta desde una red a otra mediante criterios\\
-- Utiliza un sistema de correccion de errores al transportar paquetes\\
+\begin{enumerate}
+\item Permite la conexión entre 2 redes geograficamente distintas
+\item Busca la mejor ruta desde una red a otra mediante criterios
+\item Utiliza un sistema de correccion de errores al transportar paquetes
+\end{enumerate}
 \item Explique brevemente las causas que gatillaron el problema de escases de las direcciones IPv4.\\
-Mencione 3 mecanismos utilizados actualmente para mitigar este problema.\\
-Como solo existian Clases de IP's con mascaras por defecto para c/clase,generaba una perdida de muchas combinaciones de ip al
-momento de asignarle una clase a una casa por ejemplo.
-
-
-
+Como solo existian Clases de IPs con mascaras por defecto para c/clase,generaba una 
+perdida de muchas combinaciones de ip al momento de asignarle una clase a una casa por 
+ejemplo.\\
+Mecanismos para mitigar problemática:
+\begin{enumerate}
+\item Tecnica de sumarizacion de redes 
+\item Tecnica de  creacion de subredes
+\item Ip privada y Ip pública
+\end{enumerate}
 \item Realice una breve descripción de cada uno de los campos de la cabecera IPv4. Se pide utilizar la aplicacion Wireshark para realizar 1 captura (pantallazo) e interpretar la información relacionada con la capa de red (todos los campos de la cabecera IPv4).
 \item Explique las diferencias existentes entre el protocolo IPv4 e IPv6.
 \item El prefijo de una red IPv6 es: 2001:0720:1014:0002. Se conecta un
