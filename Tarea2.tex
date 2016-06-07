@@ -73,13 +73,26 @@ configurar todos manualmente.\\
 se configura la tabla sin necesidad de un administrador.Se usa para host como PC,ya que estos pueden utilizar
 IP dinámica y así se facilitaria la conección de una gran cantidad de dispositivos.\\
 \end{enumerate}
-
 \item Un router que hace la siguiente NAT dinamica: red interior 
 192.168.0.0/24 <-> red exterior 200.230.16.192/26.\\
 ¿Cual es el rango de direcciones IPs pública con los que los equipos 
 pueden salir?
-\item ¿Que es una ACL estándar?
-\item ¿Que es una ACL extendida?
+\item ¿Que es una ACL estándar?\\\\
+Una ACL es una lista de control de acceso permitida en los routers,el tipo estándar permite filtrar antes o despues 
+de pasar por el router pero solo se puede filtrar según IP origen.ubicando en la wild-card el 0 indica el valor estático 
+y 1 el variable.\\
+por ejemplo:
+\begin{enumerate}
+\item para filtrar un solo usuario de ip 192.13.13.1 se ocuparia la wild-card igual a 0.0.0.0
+\item para filtrar una red de ip 192.13.13.0 se le aplicaría la wild-card igual a 0.0.0.255
+\end{enumerate}
+sintaxis 'Router (config-if)# ip access-group nº in|out"
+\item ¿Que es una ACL extendida?\\\\
+Una ACL es una lista de control de acceso permitida en los routers,el tipo extendida permite filtrar antes o despues
+dependiendo de el protocolo(IP, ICMP, TCP, UDP, ...)tendremos opciones de configuración diferente, siempre acorde con 
+el protocolo, es decir con TCP podré utilizar operación de puertos pero con IP no.
+sintaxis 'Router (config)# access-list nº permit|deny protocolo origen [wild-mask] [operación] [puerto origen] destino [wild-mask] 
+[operación] [puerto destino] [established]"
 \item La empresa ACME SA tiene una red como la que muestra la Figura 3. 
 En el router R0 se han establecido 2 ACLs. La primera ACL tiene por 
 objetivo de filtrar el tráfico de entrada hacia el 
