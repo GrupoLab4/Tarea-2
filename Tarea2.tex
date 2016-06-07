@@ -64,6 +64,16 @@ Son tipos de traducciones dentro de un router :
 	\item PAT : genera la asociación entre una Ip pública con su respectivo puerto en el router
 \end{enumerate}
 \item Explique las diferencias entre NAT estática y NAT dinámica.
+\begin{enumerate}
+\item NAT estática es una traducción sin cambios automáticos,dejando a el administrador como
+el que configure la tabla.Esto se aplica principalmente para dispositivos que como requerimiento
+necesiten una IP estática,por ejemplo Servidor WEB.Si se quisieran agregar más servidores se tendrían que 
+configurar todos manualmente.\\
+\item NAT dinámica es una traducción en la cual cuando se agrega un dispositivo en la LAN, automáticamente
+se configura la tabla sin necesidad de un administrador.Se usa para host como PC,ya que estos pueden utilizar
+IP dinámica y así se facilitaria la conección de una gran cantidad de dispositivos.\\
+\end{enumerate}
+
 \item Un router que hace la siguiente NAT dinamica: red interior 
 192.168.0.0/24 <-> red exterior 200.230.16.192/26.\\
 ¿Cual es el rango de direcciones IPs pública con los que los equipos 
