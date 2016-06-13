@@ -115,7 +115,9 @@ a los servicios web y ftp que se encuentran alojados en el servidor 192.168.1.20
 Es una division de una red cuando estás son muy grandes.Sirve para reducir el dominio broadcast y obtener un mayor manejo dentro
 de la red.
 \item De la direccion de red 136.228.0.0 se han de generar 99 subredes de igual tamaño.¿Cuál es la máscara que se debe utilizar?.
+La máscara a utilizar es 136.228.0.1/24\\
 \item Para la misma red del caso anterior, indique la cantidad máxima de hosts que por cada una de las subredes
+Los host máximos por unidad son 1\\
 \item Si se tiene un host cuya direccion IP y prefijo son: 19.95.99.210 
 /25.Indique su dirección de red.
 su dirección de red es 19.95.99.0/25
@@ -129,17 +131,23 @@ Las direcciones MAC vienen definidas de fábrica y con un prefijo correspondient
 \item ¿Cuantas subredes pueden tener una red que tiene un prefijo 16?.
  	16384 subredes
 \item ¿Cual es el número mínimo de bits que se pueden tomar prestados para formar una subred?.
+El mínimo es 1 ya que nos otorga 2 IPs útiles una para el host y otra para el broadcast
 \item ¿Cuales son las principales razones para utilizar subredes?.
+La principal razón es para agregar la mayor cantidad de host posibles ya que segmenta una IP en múltiples, a parte que nos ayuda
+entender mejor cuantos host va a tener aproximadamente cada red.\\
 \item Al realizar una operacion booleana en las direcciones IP 131.8.2.5
 AND 255.0.0.0 como lo haría un router, ¿Cuál sería la dirección de 
 red/subred?.
 \item Con una direccion de Clase C de 197.15.22.31 y una máscara de red 
 de 255.255.255.224,¿cuántos bits se tienen que tomar prestados para 
 crear subredes?.
+Se toman prestados 3 bits para las subredes\\
 \item Si usted quiere tener 12 subredes de Clase C, ¿cual es la máscara 
 a utilizar?.
+La mascara a utilizar es 192.168.0.1/28\\
 \item Si usted necesita una red de prefijo 16 y desea generar 510 
 direcciones de subredes, ¿cuál es la máscara que se deber ıa utilizar?.
+La mascara que se utiliza es 192.168.0.1/25\\
 \item De la topología de red, mostrada en la Figura 4, se deben generar 
 las subredes solicitadas, para esto usted debe utilizar la tecnica de 
 longitud de máscara variable VLSM de tal forma de maximizar el espacio 
