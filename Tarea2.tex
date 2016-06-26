@@ -35,7 +35,9 @@ Mecanismos para mitigar problemática:
 \item El prefijo de una red IPv6 es: 2001:0720:1014:0002. Se conecta un
 computador cuya dirección física MAC es 0008:0267:5CCA. Se pide indicar la direccion IPv6 del equipo.
 \item ¿Cual es la unidad máxima de transferencia MTU para una red Ethernet?
+La Unidad Maxima de Transferencia para Ethernet es 1500 bytes\\
 \item Indique la dirección resumida de la IPv6 0004:0000:0000:0000:000A:0000:0000:1243:00AD
+La direccion resumida es 0004::000A:0:0:1243:00AD\\
 \item Explique las diferencias existentes entre los modos túnel, traductor y dual stack
 \item Se pide realizar la conversión binaria a decimal de la información contenida en la tabla Figura 1.
 	\begin{figure}[H]
@@ -115,15 +117,17 @@ a los servicios web y ftp que se encuentran alojados en el servidor 192.168.1.20
 Es una division de una red cuando estás son muy grandes.Sirve para reducir el dominio broadcast y obtener un mayor manejo dentro
 de la red.
 \item De la direccion de red 136.228.0.0 se han de generar 99 subredes de igual tamaño.¿Cuál es la máscara que se debe utilizar?.
-La máscara a utilizar es 136.228.0.1/24\\
+La máscara a utilizar es 136.228.0.0/24\\
 \item Para la misma red del caso anterior, indique la cantidad máxima de hosts que por cada una de las subredes
 Los host máximos por unidad son 1\\
 \item Si se tiene un host cuya direccion IP y prefijo son: 19.95.99.210 
 /25.Indique su dirección de red.
-su dirección de red es 19.95.99.0/25
+Su dirección de red es 19.95.99.128/25\\
 \item Si una red Clase C se divide en subredes cuya mascara es 255.255.255.192, ¿Cuántas subredes utilizables se crean?.
+Se crean 4 subredes utilizables.\\
 \item Dada una dirección IP de host 192.168.5.121 y una máscara de 
 subred 255.255.255.248, ¿Cuál es el numero IP de la red del host?.
+El numero IP del Host es 192.168.5.120\\
 \item ¿En que se diferencian las direcciones de MAC de las de la capa de red?.
 Las direcciones MAC vienen definidas de fábrica y con un prefijo correspondiente a la empresa desarrolladora del hardware, estas solo permiten la transferencia de datos solo dentro de una misma red LAN. En cambio la dirección IP se configura al momento de montar la red LAN y puede ser estática o dinámica, también estas permiten la transferencia de datos hacia la WAN.
 \item ¿Cuantas direcciones útiles de host se pueden utilizar en una red con prefijo 24?.
@@ -147,7 +151,6 @@ a utilizar?.
 La mascara a utilizar es 192.168.0.1/28\\
 \item Si usted necesita una red de prefijo 16 y desea generar 510 
 direcciones de subredes, ¿cuál es la máscara que se deber ıa utilizar?.
-La mascara que se utiliza es 192.168.0.1/25\\
 \item De la topología de red, mostrada en la Figura 4, se deben generar 
 las subredes solicitadas, para esto usted debe utilizar la tecnica de 
 longitud de máscara variable VLSM de tal forma de maximizar el espacio 
@@ -155,6 +158,10 @@ de direcciones IPs. Se dispone de la dirección 192.200.254.0/23 la cual
 usted debe utilizar para generar las subredes. Se pide completar la 
 tabla de la Figura 5. Nota: las direcciones IP de las interfaces Fast 
 Ethernet de todos los routers NO están consideradas en los requerimientos.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{Ejercicio34}
+	\end{figure}
 %Insertar Figura 4
 \item Usted, como especialista en el diseno de redes LAN, ha sido seleccionado para
 finalizar el proyecto que se muestra en la Figura 6. El ISP le ha asignado 2 
