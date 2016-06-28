@@ -113,7 +113,7 @@ permit|deny protocolo origen [wild-mask]
 [wild-mask] 
 [operación] [puerto destino] [established]"
 
-\item La empresa ACME SA tiene una red como la que muestra la Figura 3. 
+\item La empresa ACME SA tiene una red como la que muestra la siguiente Figura . 
 En el router R0 se han establecido 2 ACLs. La primera ACL tiene por 
 objetivo de filtrar el tráfico de entrada hacia el 
 servidor DMZ con las siguientes reglas:\\
@@ -128,6 +128,7 @@ Regla2 > permit tcp any any\\
 Regla3 > permit ip any 192.168.1.200\\
 Regla4 > permit ip any any\\
 Explique la funcion que cumple cada una de estas reglas.\\
+\includegraphics[width=10cm]{fig3}\\\\
 \item Implemente los filtros necesarios para controlar los posibles ataques a los equipos de la red ACME, excepto los que corresponden a los servicios web y ftp que se encuentran alojados en el
 servidor 192.168.1.200.
 \item ¿Que es una subred?.\\\\
@@ -193,24 +194,18 @@ la máscara a utilizar?.
 \item Si usted necesita una red de prefijo 16 y desea generar 
 510 direcciones de subredes, ¿cuál es la máscara que se deber 
 ıa utilizar?.
-\item De la topología de red, mostrada en la Figura 4, se deben generar
+\item De la topología de red, mostrada en la siguiente Figura , se deben generar
 las subredes solicitadas, para esto usted debe utilizar la tecnica de 
 longitud de máscara variable VLSM de tal forma de maximizar el 
 espacio de direcciones IPs. Se dispone de la dirección 
 192.200.254.0/23 la cual usted debe utilizar para generar las 
 subredes. Se pide completar la tabla de la Figura 5. Nota: las 
-direcciones IP de las interfaces FastEthernet de todos los routers NO
-están consideradas en los requerimientos.
-%FIG4
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=15cm]{fig4}
-	\caption{Topología de red}
-	\end{figure}
-
+direcciones IP de las interfaces FastEthernet de todos los routers NO están consideradas en los requerimientos.\\
+\includegraphics[width=15cm]{fig4}
+\\\\\\
 Respuesta :\\
 \includegraphics[width=15cm]{Ejercicio34}
-\\\\\\\\\\\\
+
 \item Usted, como especialista en el diseno de redes LAN, ha sido seleccionado para
 finalizar el proyecto que se muestra en siguiente  Figura . El ISP le ha asignado 2 
 direcciones IP publicas: la dirección 177.12.180.252/30, que será utilizada como 
@@ -218,15 +213,11 @@ enlace con el ISP, y la dirección 200.198.248.0/21 la cual debe utilizar para g
 Se pide completar el diagrama de red (Figura 6) con la informacion solicitada
 (direcciones de sub-redes, máscaras, dirección de broadcast, dirección IP 
 hosts, gateway y enlaces seriales).
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=15cm]{fig6}
-	\caption{Colocar nombre}
-	\end{figure}
+\includegraphics[width=15cm]{fig6}
 %Insertar figura 6
 \item Una organizacion se divide en dos departamentos A y B. La red corporativa de 
-dicha organización se divide, a su vez, en cinco subredes tal y como muestra la 
-Figura 7. Para ello, la organizacion dispone de la dirección de red 138.8.0.0. 
+dicha organización se divide, a su vez, en cinco subredes tal y como muestra la siguiente
+Figura . Para ello, la organizacion dispone de la dirección de red 138.8.0.0. 
 Las subredes A1, A2 y A3 pertenecen al departamento A, y las subredes B1 y B2 
 pertenecen al departamento B. Dicha red corporativa se conecta a Internet    a traves 
 del router 3.
@@ -240,78 +231,66 @@ A2?
 \item ¿Podría transferir, un equipo perteneciente a la subred B1, un paquete 
 IP a todos los equipos del departamento A?. En caso de que la respuesta sea afirmativa,indique que dirección IP de destino se debe utilizar\\
 \end{enumerate}
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=15cm]{fig7}
-	\caption{Colocar nombre}
-	\end{figure}
-%Insertar figura 7
+\includegraphics[width=15cm]{fig7}
 
-\item De la topología de red de la Figura 8, complete la tabla de rutas del 
+
+
+\item De la topología de red de la siguiente Figura , complete la tabla de rutas del 
 Router/Firewall. Indique si es posible realizar una sumarización de la tabla 
 de rutas anterior (justifique). Si su respuesta es afirmativa se pide
 construir esta tabla de rutas resumida.
 	\begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{fig8}
-	\caption{Colocar nombre}
 	\end{figure}
 %insertar figura 8
-\item Dada la siguiente topología de la Figura 9, encontrar la tabla de rutas 
+\item Dada la siguiente topología de la siguiente Figura , encontrar la tabla de rutas 
 del router R1. También se pide encontrar la tabla de ruta sumarizada. En 
 ambos casos considere la existencia de una ruta por defecto.
 	\begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{fig9}
-	\caption{Colocar nombre}
 	\end{figure}
-%insertar figura 9
-
-\item Se tiene la siguiente tabla (Figura 10) de enrutamiento sin CIDR. Encuentre 
+\item Se tiene la siguiente tabla (Figura siguiente) de enrutamiento sin CIDR. Encuentre 
 la tabla del router reducida utilizando sumarizacion CIDR.
 	\begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{fig10}
-	\caption{Colocar nombre}
 	\end{figure}
 %Insertar figura 10
-\item En la red de la Figura 11 las redes Ethernet conectadas a R1 han sido 
+\item En la red de la siguiente Figura  las redes Ethernet conectadas a R1 han sido 
 notificadas de manera sumarizada hacia R2 como 192.168.144.0/20. ¿Cuáles serán 
 las direcciones IP de los paquetes que se enviara el router R2 hacia R1, de acuerdo a este resumen?.
 	\begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{fig11}
-	\caption{Colocar nombre}
+
 	\end{figure}
 %Insertar figura 11
-\item Para la red de la Figura 12, determine, ¿cuál es la mejor ruta sumarizada que
+\item Para la red de la siguiente Figura , determine, ¿cuál es la mejor ruta sumarizada que
 enviará R3 a R4?.
 	\begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{fig12}
-	\caption{Colocar nombre}
 	\end{figure}
 %Insertar figura 12
 
-\item Para la red de la Figura 13, determine si el usuario de notebook del 
+\item Para la red de la Figura siguiente , determine si el usuario de notebook del 
 departamento de VENTAS de la SUCURSAL 1 puede o no puede comunicarse con el Server 
 A del departamento de MARKETING,ubicado en la CASA MATRIZ. Si su respuesta es 
 negativa, indique cómo resolver el problema.
 	\begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{fig13}
-	\caption{Colocar nombre}
 	\end{figure}
-%Insertar figura 13
 
-\item Después de ser instalada y configurada la red de la Figura 14, se ha 
+\item Después de ser instalada y configurada la red de la Figura siguiente, se ha 
 comprobado que ésta no funciona correctamente. Usted, como especialista, ha sido 
 contratado para resolver el problema. Identifique el problema y proponga el o los 
 cambios que se deben realizar.
 	\begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{fig14}
-	\caption{Colocar nombre}
 	\end{figure}
 %Insertar figura 14
 
@@ -323,11 +302,10 @@ vector-distancia (algoritmo de Bellman-Ford) y estado de enlace (algoritmo de Di
 \item ¿Que significa una distancia administrativa de 255?.
 \item Una tabla de enrutamiento muestra la información: S* 0.0.0.0/0 [1/0] via 172.16.10.5. ¿Qué significa?
 \item Señale ventajas y desventajas del enrutamiento estático. Cite dos ejemplos donde convenga usarlo.
-\item Complete la Tabla (Figura 15) escribiendo Si o No en cada celda segun corresponda.
+\item Complete la Tabla (Figura siguiente) escribiendo Si o No en cada celda segun corresponda.
 	\begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{fig15}
-	\caption{Colocar nombre}
 	\end{figure}
 %figura 15
 
@@ -352,14 +330,13 @@ C 192.168.214.0 is directly connected, Serial 0/0/0, FastEthernet 0/0\\
 \item ¿Cual es el propósito del área 0 en OSPF?
 \item ¿Cual es el propósito de emplear interfaz de loopback con máscara
 255.255.255.255 en OSPF?
-\item Los routers de la Figura 16 se encuentra ejecutando OSPF en el 
+\item Los routers de la Figura siguiente que  se encuentra ejecutando OSPF en el 
 area 0. 
 Determine cuál será el router ID por defecto publicado por el router 
 CONCEPCION.
 	\begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{fig16}
-	\caption{Colocar nombre}
 	\end{figure}
 %insertar figura 16
 \item Nombre 3 servicios ofrecidos por la capa de Transporte.
