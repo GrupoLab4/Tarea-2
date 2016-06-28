@@ -354,16 +354,22 @@ abiertas?.
 \item ¿Cual es la función de una ventana deslizante en TCP?
 \item ¿Qué indica el campo Ventana en un segmento TCP?.
 \item ¿Cómo sincroniza TCP una conexión entre el origen y el destino 
-antes de la transmisión de datos?.
-Por que el protocolo TCP tiene un sistema de acuse de recibo que permite al 
-cliente y al servidor garantizar la recepción mutua de datos.\\
-Esto se produce de la siguiente manera.\\
-Se emite un segmento, se lo vincula a un número de secuencia. Con la recepción de un segmento de datos, 
-la máquina receptora devolverá un segmento de datos donde el indicador ACK esté fijado en 1 (para poder 
-indicar que es un acuse de recibo) acompañado por un número de acuse de recibo que equivale al número de secuencia anterior.\\
-Además de esto también contiene un timeout que define un intervalo de tiempo en el cual se espera una respuesta, esto pasa cuando el
-ACK  se demora mucho y  se decide asumir que se ha perdido el paquete o ha ocurrido algún error, por lo tanto se retransmite el 
-paquete
+
+La conexión establecida entre las dos aplicaciones a menudo se realiza siguiendo el siguiente esquema:
+\begin{enumerate}
+\item Los puertos TCP deben estar abiertos.
+La aplicación en el servidor es pasiva, es decir, que la aplicación escucha y espera una conexión.
+La aplicación del cliente realiza un pedido de conexión al servidor en el lugar donde la aplicación es abierta pasiva. La aplicación del cliente se considera abierta activa.
+\item
+Las dos máquinas deben sincronizar sus secuencias usando un mecanismo comúnmente llamado negociación en tres pasos que también se encuentra durante el cierre de la sesión.
+\end{enumerate}
+Este diálogo posibilita el inicio de la comunicación porque se realiza en tres etapas, como su nombre lo indica:
+\begin{enumerate}
+\item En la primera etapa, la máquina originadora (el cliente) transmite un segmento donde el indicador SYN está fijado en 1 (para indicar que es un segmento de sincronización), con número de secuencia N llamado número de secuencia inicial del cliente.
+\item En la segunda etapa, la máquina receptora (el servidor) recibe el segmento inicial que viene del cliente y luego le envía un acuse de recibo, que es un segmento en el que el indicador ACK está fijado en 1 y el indicador SYN está fijado en 1 (porque es nuevamente una sincronización). Este segmento incluye el número de secuencia de esta máquina (el servidor), que es el número de secuencia inicial para el cliente. El campo más importante en este segmento es el de acuse de recibo que contiene el número de secuencia inicial del cliente incrementado en 1.
+\item Por último, el cliente transmite un acuse de recibo, que es un segmento en el que el indicador ACK está fijado en 1 y el indicador SYN está fijado en 0 (ya no es un segmento de sincronización). Su número de secuencia está incrementado y el acuse de recibo representa el número de secuencia inicial del servidor incrementado en 1.
+\end{enumerate}
+
 \item En una transmision TCP, ¿qué ocurre si un segmento no es 
 confirmado tras un determinado periodo de tiempo?.\\
 Se reenvia el paquete si es que el ACK no es recibido en un determinado intervalo de tiempo
