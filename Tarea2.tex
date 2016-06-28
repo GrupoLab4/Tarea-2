@@ -355,9 +355,18 @@ abiertas?.
 \item ¿Qué indica el campo Ventana en un segmento TCP?.
 \item ¿Cómo sincroniza TCP una conexión entre el origen y el destino 
 antes de la transmisión de datos?.
+Por que el protocolo TCP tiene un sistema de acuse de recibo que permite al 
+cliente y al servidor garantizar la recepción mutua de datos.\\
+Esto se produce de la siguiente manera.\\
+Se emite un segmento, se lo vincula a un número de secuencia. Con la recepción de un segmento de datos, 
+la máquina receptora devolverá un segmento de datos donde el indicador ACK esté fijado en 1 (para poder 
+indicar que es un acuse de recibo) acompañado por un número de acuse de recibo que equivale al número de secuencia anterior.\\
+Además de esto también contiene un timeout que define un intervalo de tiempo en el cual se espera una respuesta, esto pasa cuando el
+ACK  se demora mucho y  se decide asumir que se ha perdido el paquete o ha ocurrido algún error, por lo tanto se retransmite el 
+paquete
 \item En una transmision TCP, ¿qué ocurre si un segmento no es 
-confirmado tras un 
-determinado periodo de tiempo?.
+confirmado tras un determinado periodo de tiempo?.\\
+Se reenvia el paquete si es que el ACK no es recibido en un determinado intervalo de tiempo
 \item Explique los mecanismos utilizados para realizar el control de 
 congestion y control de flujo.
 \item Explique a traves de las primitivas el establecimiento de una 
