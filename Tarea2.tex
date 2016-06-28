@@ -302,6 +302,19 @@ vector-distancia (algoritmo de Bellman-Ford) y estado de enlace (algoritmo de Di
 \item ¿Que significa una distancia administrativa de 255?.
 \item Una tabla de enrutamiento muestra la información: S* 0.0.0.0/0 [1/0] via 172.16.10.5. ¿Qué significa?
 \item Señale ventajas y desventajas del enrutamiento estático. Cite dos ejemplos donde convenga usarlo.
+Ventajas:
+\begin{enumerate}
+\item El router no se va actualizando automáticamente,por lo cual es una mejora
+\item Sirve para poder utilizar servidores dentro de una red y acceso desde fuera de la LAN
+\end{enumerate}
+Desventajas:
+\begin{enumerate}
+\item  El router necesita estar actualizandose continuamente cada vez que se le agrege un host 
+\item  Si nuestra LAN contiene muchos hosh , se tendrá que realizar una ardua tarea por completar la tabla
+\end{enumerate}
+Sirve usarla en :\\
+1.- Ubicar servidores dentro de la LAN y obtener un acceso a estos desde la WAN
+2.- Al momento de tener muy pocos host (1 o 2 host) y en la LAN no se agregen constantemente más
 \item Complete la Tabla (Figura siguiente) escribiendo Si o No en cada celda segun corresponda.
 	\begin{figure}[H]
 	\centering
@@ -319,14 +332,14 @@ distancia? ¿Cuáles de estado de enlace?
 \item ¿Cuáles son las distancias administrativas para: redes directamente conectadas, rutas estáticas,RIPv1, RIPv2, EIGRP interno, EIGRP externo, OSPF?
 \item Cite un ejemplo donde la distancia administrativa sea el determinante en la decisión de enrutamiento.
 \item Un router corporativo recibe un paquete IP con direccion origen 
-192.168.214.20 y dirección destino 192.168.22.3. Determine qué hará el router con este paquete si su tabla de enrutamiento muestra la siguiente información: ´
+192.168.214.20 y dirección destino 192.168.22.3. Determine qué hará el router con este paquete si su tabla de enrutamiento muestra la
+siguiente información: 
 RouterUDP> show ip route [?]\\
 R 192.168.215.0 [120/2] via 192.168.20.2 00:00:23, Serial 0/0/0\\
 R 192.168.115.0 [120/1] via 192.168.20.2 00:00:23, Serial 0/0/0\\
 R 192.168.30.0 [120/2] via 192.168.20.2 00:00:23, Serial 0/0\\
 C 192.168.20.0 is directly connected, Serial 0/0/0\\
 C 192.168.214.0 is directly connected, Serial 0/0/0, FastEthernet 0/0\\
-
 \item ¿Cual es el propósito del área 0 en OSPF?
 \item ¿Cual es el propósito de emplear interfaz de loopback con máscara
 255.255.255.255 en OSPF?
@@ -354,7 +367,7 @@ abiertas?.
 \item ¿Cual es la función de una ventana deslizante en TCP?
 \item ¿Qué indica el campo Ventana en un segmento TCP?.
 Indica el numero de secuencia para poder verificar si llega la informacion correctamente,
- gracias a esto se le define un campo de ventana a varios paquetes con el fin de aliviar la congestión en la red
+se le define un campo de ventana a TCP/IP con el fin de aliviar la congestión en la red y asociar un ack a varios paquetes
 \item ¿Cómo sincroniza TCP una conexión entre el origen y el destino 
 La conexión establecida entre las dos aplicaciones a menudo se realiza siguiendo el siguiente esquema:
 \begin{enumerate}
