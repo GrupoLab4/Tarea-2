@@ -108,10 +108,7 @@ el protocolo, es decir con TCP podré
 utilizar operación de puertos pero con IP 
 no.\\\\
 sintaxis 'Router (config)# access-list nº 
-permit|deny protocolo origen [wild-mask] 
-[operación] [puerto origen] destino 
-[wild-mask] 
-[operación] [puerto destino] [established]"
+permit|deny protocolo origen [wild-mask] [operación] [puerto origen] destino [wild-mask] [operación] [puerto destino] [established]"
 
 \item La empresa ACME SA tiene una red como la que muestra la siguiente Figura . 
 En el router R0 se han establecido 2 ACLs. La primera ACL tiene por 
@@ -128,9 +125,20 @@ Regla2 > permit tcp any any\\
 Regla3 > permit ip any 192.168.1.200\\
 Regla4 > permit ip any any\\
 Explique la funcion que cumple cada una de estas reglas.\\
-\includegraphics[width=10cm]{fig3}\\\\
-\item Implemente los filtros necesarios para controlar los posibles ataques a los equipos de la red ACME, excepto los que corresponden a los servicios web y ftp que se encuentran alojados en el
-servidor 192.168.1.200.
+\includegraphics[width=10cm]{fig3}\\
+Filtrado Servidor DMZ
+\begin{enumerate}
+\item Las reglas 1-2-3-4 en el  permiten el ingreso de paquetes del tipo tcp,udo,ip,icmp provenientes de cualquier red y destino cualquiera dentro de la red
+\end{enumerate}
+Filtrado de entrada hacia la red 192.168.1.0/24
+\begin{enumerate}
+\item La regla 2-4 permiten el ingreso de paquetes del tipo tcp,ip de origen y destino cualquiera sea éste
+\item La regla 3 permite el ingreso de paquetes del tipo ip con destino 192.168.1.200
+\item La regla 1 niega el ingreso de paquetes del tipo tcp con destino  192.168.1.200
+\end{enumerate}
+\item Implemente los filtros necesarios para controlar los posibles ataques a los equipos de la red ACME, excepto los que corresponden
+a los servicios web y ftp que se encuentran alojados en el servidor 192.168.1.200.\\
+
 \item ¿Que es una subred?.\\\\
 Es una division de una red cuando estás 
 son muy grandes. Sirve para reducir el 
@@ -144,12 +152,10 @@ ya que para generar al menos 99 subredes se necesita ocupar
 con la cual incluso se podrían crear 29 subredes más 
 \item Para la misma red del caso anterior, indique la cantidad máxima de hosts que por cada una de las subredes\\\\
 La cantidad máxima de host está dado por la formula
-como la máscara usada en el caso anterior es de tipo 255.255.255.128
-
-
+como la máscara usada en el caso anterior es de tipo 255.255.255.128 y la cantidad de host posibles sería 
+\[2^7-2=126\]
 \item Si se tiene un host cuya direccion IP y prefijo son: 19.95.99.210/25. Indique su dirección de red.\\\\
 Su dirección de red es 19.95.99.210 (nombre de la red)
-
 \item Si una red Clase C se divide en subredes cuya mascara es
 255.255.255.192, ¿Cuántas subredes utilizables se crean?.\\\\
 la mascara de las subredes de la forma 255.255.255.192 ocupa 
@@ -157,10 +163,10 @@ la mascara de las subredes de la forma 255.255.255.192 ocupa
 clase C tiene una mascara de tipo 255.255.255.0 se pueden crear
 \[2^2=4\]
 subredes de mascara 255.255.255.192.
-
 %Clase C: 192.168.0.0 a 192.168.255.255 (24 bits red, 8 bits hosts)
 \item Dada una dirección IP de host 192.168.5.121 y una máscara de 
 subred 255.255.255.248, ¿Cuál es el numero IP de la red del host?.
+
 \item ¿En que se diferencian las direcciones de MAC de las de la capa de red?.
 Las direcciones MAC están dadas por la tarjeta de red del equipo, son estáticas (no cambian) y permiten que equipos dentro de la misma red se comuniquen entre si, en cambio las direcciones de la capa de red (direcciones IP) son configurables y pueden ser dinámicas y permiten que los equipos se comuniquen con otros en otra red.
 \item ¿Cuantas direcciones útiles de host se pueden utilizar en una red con prefijo 24?.\\\\
@@ -221,7 +227,7 @@ enlace con el ISP, y la dirección 200.198.248.0/21 la cual debe utilizar para g
 Se pide completar el diagrama de red (Figura 6) con la informacion solicitada
 (direcciones de sub-redes, máscaras, dirección de broadcast, dirección IP 
 hosts, gateway y enlaces seriales).
-\includegraphics[width=15cm]{ejercicio35.PNG}
+\includegraphics[width=15cm]{fig6}
 %Insertar figura 6
 \item Una organizacion se divide en dos departamentos A y B. La red corporativa de 
 dicha organización se divide, a su vez, en cinco subredes tal y como muestra la siguiente
